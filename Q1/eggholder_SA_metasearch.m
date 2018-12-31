@@ -38,6 +38,7 @@ for j = 1 : length(meta_t0)
 end
 h = figure('units','normalized','outerposition',[0 0 1 1]);
 plot(performance_t0(1,:), performance_t0(2,:));
+title('eggholder SA metasearch t0');
 saveas(h, strcat('figures/', 'eggholder_SA_metasearch_t0'), 'png');
 
 % Search for annealing_rate
@@ -54,6 +55,7 @@ for j = 1 : length(meta_annealing_rate)
 end
 h = figure('units','normalized','outerposition',[0 0 1 1]);
 plot(performance_annealing_rate(1,:), performance_annealing_rate(2,:));
+title('eggholder SA metasearch annealing rate');
 saveas(h, strcat('figures/', 'eggholder_SA_metasearch_annealing_rate'), 'png');
 
 % Search for sd
@@ -70,6 +72,7 @@ for j = 1 : length(meta_sd)
 end
 h = figure('units','normalized','outerposition',[0 0 1 1]);
 plot(performance_sd(1,:), performance_sd(2,:));
+title('eggholder SA metasearch sd');
 saveas(h, strcat('figures/', 'eggholder_SA_metasearch_sd'), 'png');
 
 % Search for iterations
@@ -86,6 +89,7 @@ for j = 1 : length(meta_iterations)
 end
 h = figure('units','normalized','outerposition',[0 0 1 1]);
 plot(performance_iterations(1,:), performance_iterations(2,:));
+title('eggholder SA metasearch iterations');
 saveas(h, strcat('figures/', 'eggholder_SA_metasearch_iterations'), 'png');
 
 % Search for max_count
@@ -102,4 +106,5 @@ for j = 1 : length(meta_max_count)
 end
 h = figure('units','normalized','outerposition',[0 0 1 1]);
 plot(performance_max_count(1,:), performance_max_count(2,:));
+title('eggholder SA metasearch max count');
 saveas(h, strcat('figures/', 'eggholder_SA_metasearch_max_count'), 'png');

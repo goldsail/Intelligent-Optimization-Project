@@ -54,6 +54,9 @@ end_time = cputime;
 if should_save_plot
     h = figure('units','normalized','outerposition',[0 0 1 1]);
     plot(y_sequence(:,1), y_sequence(:,2));
+    xlabel('iteration');
+    ylabel('best so far');
+    title(strrep(name, '_', ' '));
     saveas(h, strcat('figures/', name), 'png');
 end
 

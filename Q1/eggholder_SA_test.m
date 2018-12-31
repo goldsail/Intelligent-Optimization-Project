@@ -20,10 +20,13 @@ end
 
 h = figure('units','normalized','outerposition',[0 0 1 1]);
 hist(results(:,2));
+title('repeat for 20 times: eggholder SA test')
 saveas(h, strcat('figures/', 'eggholder_SA_test'), 'png');
 
 performance_y = [min(results(:,2)); mean(results(:,2)); max(results(:,2))];
-performance_y
+disp('minimum y searched (min, mean, max)');
+disp(performance_y);
 
 performance_t = [min(results(:,1)); mean(results(:,1)); max(results(:,1))];
-performance_t
+disp('time cost in sec (min, mean, max)');
+disp(performance_t);
