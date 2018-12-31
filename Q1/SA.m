@@ -1,4 +1,8 @@
-function result = SA(func, params, name)
+function result = SA(func, params, name, should_save_plot)
+
+if (nargin < 4)
+        should_save_plot = true;
+end
 
 start_time = cputime;
 
@@ -47,9 +51,11 @@ end
 
 end_time = cputime;
 
-h = figure('units','normalized','outerposition',[0 0 1 1]);
-plot(y_sequence(:,1), y_sequence(:,2));
-saveas(h, strcat('figures/', name), 'png');
+if should_save_plot
+    h = figure('units','normalized','outerposition',[0 0 1 1]);
+    plot(y_sequence(:,1), y_sequence(:,2));
+    saveas(h, strcat('figures/', name), 'png');
+end
 
 result.x = x_best;
 result.y = func.func(x_best);
