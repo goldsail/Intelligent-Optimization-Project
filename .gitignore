@@ -12,7 +12,7 @@
 
 *.asv
 
-/Q1/figures/
+# /Q1/figures/
 /Q2/figures/
 /Q3/figures/
 
