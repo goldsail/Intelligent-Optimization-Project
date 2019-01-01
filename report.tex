@@ -201,7 +201,48 @@
 
     \subsection{Sensitivity Analysis}
     {
+        Hyper tuning could be one of the most tricky parts in an intelligent optimization algorithm. 
+        For the tests above, the following hyperparameters are used. (Table \ref{tab:hyper_SA_Q1} and \ref{tab:hyper_DE_Q1})
 
+        \begin{table}[!hbp]
+            \centering
+            \begin{tabular}{|c|c|}
+                \hline
+                Hyperparameter & Default value \\
+                \hline
+                initial temperature & 0.2 \\
+                \hline
+                annealing rate & 0.98 \\
+                \hline
+                std. for proposal func. & 100 \\
+                \hline
+                inner loop iterations & 20 \\
+                \hline
+                outer loop iterations & 30 \\
+                \hline
+            \end{tabular}
+            \caption{Default Hypers for SA}
+            \label{tab:hyper_SA_Q1}
+        \end{table}
+
+        \begin{table}[!hbp]
+            \centering
+            \begin{tabular}{|c|c|}
+                \hline
+                Hyperparameter & Default value \\
+                \hline
+                F (mutation) & 0.5 \\
+                \hline
+                cross rate & 0.3 \\
+                \hline
+                loop iterations & 600 \\
+                \hline
+            \end{tabular}
+            \caption{Default Hypers for DE}
+            \label{tab:hyper_DE_Q1}
+        \end{table}
+
+        
     }
 }
 
