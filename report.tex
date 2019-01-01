@@ -242,6 +242,34 @@
             \label{tab:hyper_DE_Q1}
         \end{table}
 
+        \begin{figure}[!htbp]
+            \centering
+            \includegraphics[width=0.45\textwidth]{Q1/figures/eggholder_SA_metasearch_t0.png}
+            \includegraphics[width=0.45\textwidth]{Q1/figures/eggholder_SA_metasearch_annealing_rate.png}
+            \includegraphics[width=0.45\textwidth]{Q1/figures/eggholder_SA_metasearch_sd.png}
+            \includegraphics[width=0.45\textwidth]{Q1/figures/eggholder_SA_metasearch_iterations.png}
+            \includegraphics[width=0.45\textwidth]{Q1/figures/eggholder_SA_metasearch_max_count.png}
+            \caption{Greedy sensitivity analysis for SA}
+            \label{fig:sensitivity_SA}
+        \end{figure}
+
+        \begin{figure}[!htbp]
+            \centering
+            \includegraphics[width=0.45\textwidth]{Q1/figures/eggholder_DE_metasearch_population_size.png}
+            \caption{Greedy sensitivity analysis for DE}
+            \label{fig:sensitivity_DE}
+        \end{figure}
+
+        From Figure \ref{fig:sensitivity_SA}, we find that SA is sensitive to hyperparameters, especially initial temperature and annealing rate.
+        This can be easily interpreted: the temperature determines which side the balance to fall between exploitation and exploration. 
+        Luckily, the annealing rate we chose is appropriate among other four choices.
+        Other hyperparametrs also count. 
+        For example, the standard deviation (std.) of the Gaussian proposal function also plays a role in the balance between exploitation and exploration.
+
+        From Figure \ref{fig:sensitivity_DE}, we see that DE depends on the population size. 
+        It works fine with a population size smaller than 40. 
+        With a size of 100, it needs more iterations to explore.
+        If the iteration number is fixed, DE will suffer lack of exploration, which is also called ``prematurity''.
         
     }
 }
