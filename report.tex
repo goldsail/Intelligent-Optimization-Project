@@ -63,6 +63,36 @@
         iii) there are dozens of local minimums throughout the space.
         
     }
+
+    \subsection{Implementation of SA and DE}
+    {
+        \begin{figure}[!htbp]
+            \centering
+            \includegraphics[width=0.45\textwidth]{figures/SA_algorithm.png}
+            \caption{Flow chart of simulated annealing (SA)}
+            \label{fig:SA}
+        \end{figure}
+
+        \begin{figure}[!htbp]
+            \centering
+            \includegraphics[width=0.45\textwidth]{figures/DE_algorithm.png}
+            \caption{Flow chart of differential evolution (DE)}
+            \label{fig:DE}
+        \end{figure}
+
+        To make full use of vectorized operations in MATLAB, we use ``arrayfun'' function to evaluate the target function in batches. 
+        The ``encode'' and ``decode'' functions are also written using vectorized operations to gain more performance.
+    }
+
+    \subsection{Experiments}
+    {
+
+    }
+
+    \subsection{Sensitivity Analysis}
+    {
+
+    }
 }
 
 \bibliographystyle{ieeetran}
