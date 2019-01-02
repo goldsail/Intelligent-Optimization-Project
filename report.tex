@@ -422,6 +422,17 @@
             When the swarm evolves to certain generation, 
             there is at least one particle located in the best previous position of the swarm and this particle will stop evolving. 
             Then, the particle is improved by the following method to reinforce the global convergence of the algorithm.
+
+            For the $j$-th particle at time step $t$, when the three positions of the particle $x_j(t)$, $p_j(t)$, $p_g(t)$ are superposing, the $j$-th particle will stop evolving. 
+            In order to improve the convergence of the algorithm, $p_g(t)$ is kept as the best previous position of the particle swarm, 
+            the $j$-th particle position $x_j(t+1)$ is generated randomly again in the search space $S$, then update $p_j(t+1)$, 
+            positions of other particles $i$ can be obtained by using equations of standard PSO at time step $t+1$, then update $p_g(t+1)$.
+        }
+
+        \subsubsection{Why these improvements work}
+        {
+            With the improvements above, there is at least one particle $j$ whose positions $x_j(t)$, $p_j(t)$ and $p_g(t)$ are superposing in certain evolutional generations. 
+            Thus at least one particle needs to be generated randomly again in the search space $S$, so the global convergence capability of the new algorithm is reinforced as a consequence.
         }
     }
 
