@@ -15,7 +15,7 @@
 \DeclareMathOperator*{\argmax}{arg\,max}
 \DeclareMathOperator*{\argmin}{arg\,min}
 \makesavenoteenv{figure}
-\title{Title}
+\title{Course Report for Intelligent Optimization Algorithms}
 \author{
     Fan~JIN
     \thanks{Fan~JIN 2015011506  \texttt{jinf15@mails.tsinghua.edu.cn}}
@@ -24,10 +24,15 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-    Abstract
+    This homework report has 3 parts. 
+    In the first part, simulated annealing (SA) and differential evolution (DE) are used to test the eggholder function.
+    Greedy metasearch is also used to identify the parameter sensitivity of SA and DE.
+    In the second part, SA is employed for combinatorial optimization, the TSP. 
+    In the thrid part, a work that improves the global convergence capability of the particle swarm optimization (PSO) is summarized.
+    Two key improvements are formulated with reasons why they work, as long as the two experiments on the drilling path problem.
 \end{abstract}
 \begin{IEEEkeywords}
-    Keywords 1, Keywords 2,
+    Intelligent optimization algorithm, simulated annealing, differential evolution, particle swarm
 \end{IEEEkeywords}
 
 \section{Question 1: Function Optimization}
@@ -442,7 +447,7 @@
         The hyperparameters $c_1$ (weight of individual memory term $p_i(t)$) and $c_2$ (weight of collective memory term $p_g(t)$) are chosen randomly between 0 and 1.
         The hyperparameter $\omega$ (weight of inertial term) is chosen from $\{ 0, 0.5, 1 \}$.
         The performance of global convergence is defined as the search ratio, i.e.
-        $$\frac{\mathrm{Total of search generation numbers}}{\mathrm{the solution space}}.$$
+        $$\frac{\mathrm{Total~of~search~generation~numbers}}{\mathrm{the~solution~space}}.$$
 
         \begin{figure}[!htbp]
             \centering
