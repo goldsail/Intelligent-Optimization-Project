@@ -368,7 +368,7 @@
         \centering
         \includegraphics[width=0.45\textwidth]{figures/drilling_1.png}
         \includegraphics[width=0.45\textwidth]{figures/drilling_2.png}
-        \caption{Printed circuit boards with holes to drill}
+        \caption{Printed circuit boards with holes to drill \cite{zhu2008drilling}}
         \label{fig:drillings}
     \end{figure}
 
@@ -379,7 +379,36 @@
     In their work, they propose a mechanism that comes with global convergence capability.
     This is their major contribution in this paper. 
 
-    
+    \subsection{Standard PSO}
+    {
+        In the standard PSO, the position of a particle is corresponding to a solution of the problem.
+        Here in the drilling path problem, the position is encoded into a discrete space.
+        Similar to TSP, the encoded space is the permutations of an integer series indicating the order that the cutting tool should follow.
+
+        The convergence of standard PSO has been studied by Solis and Wets (1981). 
+        Their work shows that the standard PSO is not guaranteed to be a local optimization solution, nor is the local convergence.
+    }
+
+    \subsection{PSO with global convergence characteristics}
+    {
+        In the topical paper \cite{zhu2008drilling}, there are two key improvements:
+
+        \subsubsection{Improvement 1}
+        {
+            In standard PSO, the velocity of particle $i$ at time $t+1$ should be
+            $$v_i(t+1) = [c_1 \otimes (p_i(t) - x_i(t))] \oplus [c_2 \otimes (p_g(t) - x_i(t))],$$
+            which does not depend on the previous speed $v_i(t)$.
+        
+            In the topical paper, the term of previous speed and the speed memory remain, indicating that the capability of convergence on global solution is not affected.
+            $$v_i(t+1) = (\omega \otimes v_i(t)) \oplus [c_1 \otimes (p_i(t) - x_i(t))] \oplus [c_2 \otimes (p_g(t) - x_i(t))].$$
+            
+        }
+
+        \subsubsection{Improvement 2}
+        {
+
+        }
+    }
 
 }
 
