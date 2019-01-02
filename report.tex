@@ -436,6 +436,35 @@
         }
     }
 
+    \subsection{Experiments and Conclusion}
+    {
+        The authors tested the PSO with global convergence characteristics on two work-pieces (Figure \ref{fig:drillings}).
+        The hyperparameters $c_1$ (weight of individual memory term $p_i(t)$) and $c_2$ (weight of collective memory term $p_g(t)$) are chosen randomly between 0 and 1.
+        The hyperparameter $\omega$ (weight of inertial term) is chosen from $\{ 0, 0.5, 1 \}$.
+        The performance of global convergence is defined as the search ratio, i.e.
+        $$\frac{\mathrm{Total of search generation numbers}}{\mathrm{the solution space}}.$$
+
+        \begin{figure}[!htbp]
+            \centering
+            \includegraphics[width=0.45\textwidth]{figures/drilling_test_1.png}
+            \includegraphics[width=0.45\textwidth]{figures/drilling_test_2.png}
+            \caption{Experiments by \cite{zhu2008drilling}}
+            \label{fig:drilling_tests}
+        \end{figure}
+
+        Figure \ref{fig:drilling_tests} demonstrates the result. The conclusions can be reached that \cite{zhu2008drilling}
+        \begin{itemize}
+            \item The global convergence PSO algorithm has fast convergence speed.
+            \item The local optimization solutions are improved at the same time by the new PSO algorithm 
+            and the improved local optimization solutions are much nearer to the global optimization solution.
+            \item The new global convergence PSO algorithm can obtain the known global optimization solution, 
+            but the basic PSO algorithm is not guaranteed to be convergent on the global optimization solution.
+        \end{itemize}
+
+        The authors made final remarks on further work: how to improve the generating method of the stop evolution particle. 
+        In the topical paper, the generating method is a simple random generation with few exceptional cases of superposition.
+        In future works, more generating methods may be studied, and this still remains an open question.
+    }
 }
 
 \bibliographystyle{ieeetran}
