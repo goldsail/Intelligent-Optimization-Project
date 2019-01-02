@@ -338,6 +338,21 @@
             \caption{Test case \#10}
             \label{fig:TSP_SA_example}
         \end{figure}
+
+        Here are the final remarks:
+        \begin{itemize}
+            \item Combinatorial optimization is usually more time-consuming than function optimization with the same size.
+            This is partly due to the time cost of mutation and crossover, whereas the time cost of real number calculation is neglegible.
+            \item Hyper tuning is the most tricky part in SA, particularly for the temperature. 
+            While an improper annealing rate would only slower the convergence process, 
+            an improper initial temperature could impede convergence from the very beginning.
+            I tried different initial temperatures of a geometric series, ranging from 0.01, 0.1, 1, 10, 100, 1000, etc. 
+            After locating the optimal initial temperature $t_0$ between 0.1 and 1, I used binary search to find the optimal one.
+            I finally chose $t_0 = 0.2$.
+            \item To speed up the process and add more exploration to it, I modified SA a bit:
+            In my implementation, the mutation can consist of several consecutive swaps, rather than only one swap.
+            I tested it and only 400,000 iterations are needed with multiple swaps, whereas they are not enough with single swap.
+        \end{itemize}
     }
 }
 

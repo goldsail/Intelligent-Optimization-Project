@@ -9,6 +9,7 @@
 *.dvi
 *.log
 *.gz
+*.synctex(busy)
 
 *.asv
 
