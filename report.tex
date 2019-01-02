@@ -385,6 +385,18 @@
         Here in the drilling path problem, the position is encoded into a discrete space.
         Similar to TSP, the encoded space is the permutations of an integer series indicating the order that the cutting tool should follow.
 
+        The PSO is a swarm intelligence algorithm inspired by bird swarm seeking food. 
+        A swarm of particles, like birds, are moving in the search space to find a optimal location, like the food.
+        The fitness value in each location, defined by the target function value, indicates the ``distance'' of the current location.
+        For the $i$-th particle at time $t+1$, it has a velocity of 
+        $$v_i(t+1) = [c_1 \otimes (p_i(t) - x_i(t))] \oplus [c_2 \otimes (p_g(t) - x_i(t))],$$
+        where $x_i(t)$ is its current location at time $t$, 
+        $p_i(t)$ is the best location the particle has searched so far, 
+        and $p_g(t)$ is the best location the swarm has searched so far.
+        The velocity is a linear combination, taking both individual and collective information into account.
+        It follows that the location is updated according to the speed:
+        $$x_i(t+1) = x_i(t) + v_i(t+1).$$
+
         The convergence of standard PSO has been studied by Solis and Wets (1981). 
         Their work shows that the standard PSO is not guaranteed to be a local optimization solution, nor is the local convergence.
     }
@@ -401,12 +413,15 @@
         
             In the topical paper, the term of previous speed and the speed memory remain, indicating that the capability of convergence on global solution is not affected.
             $$v_i(t+1) = (\omega \otimes v_i(t)) \oplus [c_1 \otimes (p_i(t) - x_i(t))] \oplus [c_2 \otimes (p_g(t) - x_i(t))].$$
-            
+            This is probably inspired by the momentum term, or inertia term, that has been in widespread use in other algorithms such as gradient descent.
+            The inertia term helps make the velocity term smoother and increase the chance of getting rid of local minimum areas by exploration.
         }
 
         \subsubsection{Improvement 2}
         {
-
+            When the swarm evolves to certain generation, 
+            there is at least one particle located in the best previous position of the swarm and this particle will stop evolving. 
+            Then, the particle is improved by the following method to reinforce the global convergence of the algorithm.
         }
     }
 
