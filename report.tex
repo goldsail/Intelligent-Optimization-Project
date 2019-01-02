@@ -356,6 +356,33 @@
     }
 }
 
+\section{Question 3: Paper Reading about Drilling Path Optimization}
+{
+    In a machining center, holes-machining is a typical operation. 
+    For instance, the production of PCB (printed circuit board) requires an intense procedure of drilling (Figure \ref{fig:drillings}).
+    The drilling process takes much time, as much as 70\% of total operation time, due to slow motion of the cutting tools. \cite{zhu2008drilling}
+    Therefore, it is worth it reducing that time by finding an optimal drilling path.
+    Similar to the TSP, the drilling path problem is NP-hard, and therefore intelligent optimization algorithms are needed.
+    In this section, a work using swarm particle algorithms \cite{zhu2008drilling} will be summarized.
+    \begin{figure}[!htbp]
+        \centering
+        \includegraphics[width=0.45\textwidth]{figures/drilling_1.png}
+        \includegraphics[width=0.45\textwidth]{figures/drilling_2.png}
+        \caption{Printed circuit boards with holes to drill}
+        \label{fig:drillings}
+    \end{figure}
+
+    Zhu's paper reviews related work, including the Hopfield algorithm, evolutionary ant colony algorithm, genetic algorithm, tabu search, simulated annealing, etc.
+    It follows that the drilling path problem can be expressed as a single-objective TSP.
+    Hence, the particle swarm optimization (PSO) can be used.
+    However, standard PSO suffers in the drilling path problem for its slow convergence.
+    In their work, they propose a mechanism that comes with global convergence capability.
+    This is their major contribution in this paper. 
+
+    
+
+}
+
 \bibliographystyle{ieeetran}
 \bibliography{reference}
 \end{document}
