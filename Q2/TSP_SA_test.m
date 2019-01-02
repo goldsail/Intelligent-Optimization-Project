@@ -17,14 +17,14 @@ for i = 1:20
     h = figure('units','normalized','outerposition',[0 0 1 1]);
     plot(func.prob(result.x, 1), func.prob(result.x, 2));
     title(sprintf('TSP SA test %d', i));
-    saveas(h, strcat('figures/', sprintf('TSP_SA_test_%d', i)), 'png');
-
+    saveas(h, strcat('figures/', sprintf('TSP_SA_test_result_%d', i)), 'png');
+    
 end
 
 h = figure('units','normalized','outerposition',[0 0 1 1]);
 hist(results(:,2));
-title('repeat for 20 times: eggholder SA test')
-saveas(h, strcat('figures/', 'eggholder_SA_test'), 'png');
+title('repeat for 20 times: TSP SA test')
+saveas(h, strcat('figures/', 'TSP_SA_test'), 'png');
 
 performance_y = [min(results(:,2)); mean(results(:,2)); max(results(:,2))];
 disp('minimum y searched (min, mean, max)');

@@ -274,6 +274,73 @@
     }
 }
 
+\section{Question 2: Combinatorial Optimization}
+{
+    \subsection{Benchmark Problem: 50-city TSP}
+    {
+        The benchmark problem is a TSP of 50 cities. The best result known is 427.855 \cite{book:wang}. 
+    }
+
+    \subsection{Experiment}
+    {
+        Repeated for 20 times, the performance (best value searched and time cost) of each algorithm is recorded. 
+        (Table \ref{tab:performance_Q2} and \ref{tab:timecost_Q2})
+        (Figure \ref{fig:TSP_SA})
+
+        \begin{table}[!hbp]
+            \centering
+            \begin{tabular}{|c|c|c|c|}
+                \hline
+                Alg. & best so far (min) & b.s.f. (mean) & b.s.f. (max) \\
+                \hline
+                SA &  438.7710 &  472.3798 &  493.6293 \\
+                \hline
+            \end{tabular}
+            \caption{Performance after 20th repitition}
+            \label{tab:performance_Q2}
+        \end{table}
+
+        \begin{table}[!hbp]
+            \centering
+            \begin{tabular}{|c|c|c|c|}
+                \hline
+                Alg. & time cost in sec (min) & t.c. (mean) & t.c. (max) \\
+                \hline
+                SA &  312.9063 &  341.9633 &  398.1719 \\
+                \hline
+            \end{tabular}
+            \caption{Time cost after 20th repitition}
+            \label{tab:timecost_Q2}
+        \end{table}
+        
+        \begin{figure}[!htbp]
+            \centering
+            \includegraphics[width=0.45\textwidth]{Q2/figures/TSP_SA_test.png}
+            \caption{Performance of SA after 20th repitition}
+            \label{fig:TSP_SA}
+        \end{figure}
+
+        Compared with the best result known, 427.855, the simulated annealing achieves similar performance in the best case.
+        The worst case is also acceptable in most cases. 
+        The time cost, however, is very high because too many iterations are needed before it could converge.
+    }
+
+    \subsection{Discussion}
+    {
+        For the 10th experiment (Figure \ref{fig:TSP_SA_example}), we see that the simulated annealing converges slowly. 
+        At first, exploration outweights exploitation as the temperature is high and therefore worse results are more likely to be accepted.
+        As the temperature decreases, exploitation is more and more preferred, making the process converge and halt.
+
+        \begin{figure}[!htbp]
+            \centering
+            \includegraphics[width=0.45\textwidth]{Q2/figures/TSP_SA_test_result_10.png}
+            \includegraphics[width=0.45\textwidth]{Q2/figures/TSP_SA_test_10.png}
+            \caption{Test case \#10}
+            \label{fig:TSP_SA_example}
+        \end{figure}
+    }
+}
+
 \bibliographystyle{ieeetran}
 \bibliography{reference}
 \end{document}

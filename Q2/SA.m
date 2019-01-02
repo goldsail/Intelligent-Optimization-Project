@@ -1,7 +1,7 @@
 function result = SA(func, params, name, should_save_plot)
 
 if (nargin < 4)
-        should_save_plot = true;
+    should_save_plot = true;
 end
 
 start_time = cputime;
